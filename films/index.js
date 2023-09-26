@@ -1,6 +1,5 @@
 const server = require("./src/server");
-
-const PORT = 8002;
+const { PORT } = require("./src/config/envs");
 
 server.listen(PORT, () => {
   console.log(`Films service listening on port ${PORT}`);
