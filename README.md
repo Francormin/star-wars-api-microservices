@@ -1,5 +1,7 @@
 # Upskilling Backend Microservices - Star Wars API
 
+<img src="https://res.cloudinary.com/dviltxetl/image/upload/v1696174926/sw-logo_jww8li.jpg" />
+
 This project has been created to implement a basic microservices platform.
 
 Following the microservices architecture, it provides the functionality to create, find, update or delete information about characters, planets and films from the Star Wars saga.
