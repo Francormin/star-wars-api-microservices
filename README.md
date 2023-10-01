@@ -1,6 +1,6 @@
 # Upskilling Backend Microservices - Star Wars API
 
-<img src="https://res.cloudinary.com/dviltxetl/image/upload/v1696174926/sw-logo_jww8li.jpg" alt="star-wars-logo" />
+<a href="https://swapi.dev/" target="_blank"><img src="https://res.cloudinary.com/dviltxetl/image/upload/v1696174926/sw-logo_jww8li.jpg" alt="star-wars-logo" /></a>
 
 This project has been created to implement a basic microservices platform.
 
