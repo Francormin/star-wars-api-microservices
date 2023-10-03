@@ -46,16 +46,24 @@ const filmSchema = new Schema({
   }
 });
 
-filmSchema.statics.getAll = async function () {
+filmSchema.statics.getAllDocs = async function () {
   return await this.find().populate("characters", "_id name").populate("planets", "_id name");
 };
 
-filmSchema.statics.getById = async function (id) {
+filmSchema.statics.getDocById = async function (id) {
   return await this.findById(id).populate("characters", "_id name").populate("planets", "_id name");
 };
 
-filmSchema.statics.insert = async function (film) {
+filmSchema.statics.insertNewDoc = async function (film) {
   return await this.create(film);
+};
+
+filmSchema.statics.updateDocById = async function (id, film) {
+  return await this.findByIdAndUpdate(id, film);
+};
+
+filmSchema.statics.deleteDocById = async function (id) {
+  return await this.findByIdAndDelete(id);
 };
 
 module.exports = filmSchema;

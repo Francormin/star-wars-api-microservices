@@ -56,16 +56,24 @@ const planetSchema = new Schema({
   }
 });
 
-planetSchema.statics.getAll = async function () {
+planetSchema.statics.getAllDocs = async function () {
   return await this.find().populate("residents", "_id name").populate("films", "_id title");
 };
 
-planetSchema.statics.getById = async function (id) {
+planetSchema.statics.getDocById = async function (id) {
   return await this.findById(id).populate("residents", "_id name").populate("films", "_id title");
 };
 
-planetSchema.statics.insert = async function (planet) {
+planetSchema.statics.insertNewDoc = async function (planet) {
   return await this.create(planet);
+};
+
+planetSchema.statics.updateDocById = async function (id, planet) {
+  return await this.findByIdAndUpdate(id, planet);
+};
+
+planetSchema.statics.deleteDocById = async function (id) {
+  return await this.findByIdAndDelete(id);
 };
 
 module.exports = planetSchema;

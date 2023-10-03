@@ -64,16 +64,24 @@ const characterSchema = new Schema({
   }
 });
 
-characterSchema.statics.getAll = async function () {
+characterSchema.statics.getAllDocs = async function () {
   return await this.find().populate("homeworld", "_id name").populate("films", "_id title");
 };
 
-characterSchema.statics.getById = async function (id) {
+characterSchema.statics.getDocById = async function (id) {
   return await this.findById(id).populate("homeworld", "_id name").populate("films", "_id title");
 };
 
-characterSchema.statics.insert = async function (character) {
+characterSchema.statics.insertNewDoc = async function (character) {
   return await this.create(character);
+};
+
+characterSchema.statics.updateDocById = async function (id, character) {
+  return await this.findByIdAndUpdate(id, character);
+};
+
+characterSchema.statics.deleteDocById = async function (id) {
+  return await this.findByIdAndDelete(id);
 };
 
 module.exports = characterSchema;
