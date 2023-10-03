@@ -5,6 +5,6 @@ module.exports = async (req, res) => {
   const { model } = req.params;
   const body = req.body;
 
-  const result = await store[model].insert(body);
+  const result = await store[model].insertNewDoc(body);
   return response(res, 201, result);
 };
