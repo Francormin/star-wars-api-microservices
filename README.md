@@ -1,4 +1,4 @@
-# Upskilling Backend Microservices - Star Wars API
+# Backend Microservices Upskilling - Star Wars API
 
 <a href="https://swapi.dev/" target="_blank"><img src="https://res.cloudinary.com/dviltxetl/image/upload/v1696174926/sw-logo_jww8li.jpg" alt="star-wars-logo" /></a>
 
